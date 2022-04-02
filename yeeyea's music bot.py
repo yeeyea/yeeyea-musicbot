@@ -10,6 +10,7 @@ from discord import FFmpegPCMAudio
 import asyncio
 import time
 from urllib import request
+import os
 
 bot = commands.Bot(command_prefix='!')
 client = discord.Client()
@@ -472,5 +473,5 @@ async def 즐겨찾기삭제(ctx, *, number):
                 await ctx.send("즐겨찾기에 노래가 없어서 지울 수 없어요!")
 
 
-
-bot.run('OTU5NTc2MzgwMzY5MTc0NTc4.Ykd5JQ.LQadTXNi2AMAyoNq6NQJfMWZWkw')
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
